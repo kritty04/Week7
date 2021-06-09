@@ -61,8 +61,8 @@ all: main-build
 main-build: Week7\ QEI.elf secondary-outputs
 
 # Tool invocations
-Week7\ QEI.elf: $(OBJS) $(USER_OBJS) C:\git\Week-7-QEI\07\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Week7 QEI.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\git\Week-7-QEI\07\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Week7 QEI.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Week7\ QEI.elf: $(OBJS) $(USER_OBJS) C:\Git\Week7\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Week7 QEI.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Git\Week7\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Week7 QEI.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
